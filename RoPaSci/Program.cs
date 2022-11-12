@@ -7,17 +7,18 @@ namespace RoPaSci
     {
         static void Main(string[] args)
         {
-            Random foe = new Random();
-            int enemy = foe.Next(1, 3);//Creates Random Foe which generates 1/2/3 
-            //Lets say Rock is 1
-            //Paper is 2
-            //Scissor is 3
-            int wins = 0, amo=0, lost=0,draw=0;
             bool itsFun = true;
-            string display = "";
-            string disEnemy = "";
+            int wins = 0,amo=0, lost=0,draw=0;
             do
             {
+                Random foe = new Random();
+                int enemy = foe.Next(1, 3);//Creates Random Foe which generates 1/2/3 
+                //Lets say Rock is 1
+                //Paper is 2
+                //Scissor is 3
+                string display = "";
+                string disEnemy = "";
+
                 Console.WriteLine("---ROCK * PAPER * SCISSOR---:\n");
                 Console.WriteLine("1.Rock\n2.Paper\n3.Scissor\n\nEnter a number to play!");
                 int c = 7;
@@ -70,12 +71,6 @@ namespace RoPaSci
                     Console.WriteLine($"You entered {display} and I entered {disEnemy}");
                     Console.WriteLine("You lost!");
                     amo++;lost++;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Wrong input. \nPlease enter choice 1,2 or 3"); 
-                    Console.ForegroundColor = ConsoleColor.Green;
                 }
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine($"\nWins: {wins}\nLost:{lost}\nDraws:{draw}\nPlayed games: {amo}");
