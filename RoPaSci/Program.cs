@@ -72,6 +72,10 @@ namespace RoPaSci
                     Console.WriteLine("You lost!");
                     amo++;lost++;
                 }
+                else
+                {
+                    Console.WriteLine("\nWrong input. \nPlease enter choice 1,2 or 3");
+                }
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine($"\nWins: {wins}\nLost:{lost}\nDraws:{draw}\nPlayed games: {amo}");
                 Console.WriteLine("\nPress any key to continue");Console.ReadKey();
